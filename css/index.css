@@ -6,6 +6,7 @@
 body {
   width: 100%;
   background-color: #141415;
+  overflow-x: hidden;
 }
 
 .container {
@@ -31,14 +32,63 @@ header ul li a {
   font-size: 17px;
 }
 
+header input[type='text'] {
+  background-color: #141415;
+  outline: none;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  padding: 5px;
+  width: 225px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+header input[type='text']::placeholder {
+  color: rgb(168, 168, 168);
+}
+
+header input[type='text']:focus {
+  background-color: #ffffff;
+  color: rgb(65, 65, 65);
+}
+
 #carrossel figure {
   height: 450px;
+}
+
+#carrossel:hover #setas p {
+  margin-left: 35px;
+  margin-right: 35px;
+  transition: 0.5s;
+}
+
+#carrossel:not(:hover) #setas p {
+  margin-left: -40px;
+  margin-right: -40px;
+  transition: 0.5s;
+}
+
+#setas {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 300px;
+}
+
+#setas p {
+  display: inline-block;
+  font-size: 80px;
+  color: white;
+  cursor: pointer;
+}
+
+#carrossel {
+  height: 400px;
 }
 
 #carrossel figcaption {
   position: relative;
   bottom: 180px;
-  color: white;
+  color: #e0e0e0;
   text-shadow: 0px 0px 5px black;
 }
 
@@ -46,24 +96,24 @@ header ul li a {
   position: relative;
   bottom: 30px;
   font-size: 50px;
-  color: white;
+  color: #e0e0e0;
 }
 
 #carrossel figcaption h3 {
   position: relative;
   font-size: 25px;
   bottom: 5px;
-  color: white;
+  color: #e0e0e0;
 }
 
 #listas {
-  padding-top: 80px;
+  margin-top: 120px;
   width: 100%;
   background-color: #141415;
 }
 
 #listas h2 {
-  color: white;
+  color: #e0e0e0;
   font-weight: bolder;
   margin-bottom: 20px;
 }
